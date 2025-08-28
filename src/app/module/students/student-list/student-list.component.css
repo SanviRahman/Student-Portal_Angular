@@ -1,0 +1,69 @@
+.student-list-container {
+  background: #fff;
+  padding: 24px;
+  border-radius: 12px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.1);
+  max-width: 900px;
+  margin: 0 auto;
+  animation: fadeIn 0.4s ease-in-out;
+}
+
+.student-list-container h2 {
+  color: #0D47A1; /* Primary */
+  border-left: 5px solid #42A5F5; /* Accent */
+  padding-left: 12px;
+  margin-bottom: 20px;
+  font-weight: 600;
+}
+
+/* Student cards */
+.student-card {
+  background: #E3F2FD; /* Light Blue */
+  border-left: 5px solid #1565C0; /* Secondary */
+  padding: 12px 16px;
+  margin-bottom: 12px;
+  border-radius: 8px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.student-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+/* Individual info style */
+.student-id {
+  font-weight: bold;
+  margin-right: 8px;
+  color: #0D47A1; /* Primary */
+}
+
+.student-name {
+  font-weight: 500;
+  margin-right: 6px;
+  color: #333;
+}
+
+.student-email {
+  font-style: italic;
+  color: #555;
+  margin-right: 8px;
+}
+
+.student-course {
+  background: #42A5F5; /* Accent */
+  color: #fff;
+  padding: 2px 8px;
+  border-radius: 4px;
+  font-size: 0.9em;
+}
+
+/* Fade-in animation */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}

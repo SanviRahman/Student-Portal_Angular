@@ -1,0 +1,11 @@
+<div class="student-list-container">
+  <h2>Student List</h2>
+  <ul>
+    <li *ngFor="let student of students" class="student-card">
+      <span class="student-id">{{student.id}}.</span>
+      <span class="student-name">{{student.name}}</span>
+      <span class="student-email">({{student.email}})</span>
+      <span class="student-course">{{student.course}}</span>
+    </li>
+  </ul>
+</div>

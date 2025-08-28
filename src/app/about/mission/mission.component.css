@@ -1,0 +1,14 @@
+.mission-card {
+  background: #E3F2FD; /* Light Blue */
+  border-left: 5px solid #1565C0; /* Secondary */
+  padding: 16px;
+  margin-bottom: 16px;
+  border-radius: 8px;
+  color: #333;
+  box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+}
+
+.mission-card h3 {
+  margin-top: 0;
+  color: #0D47A1; /* Primary */
+}

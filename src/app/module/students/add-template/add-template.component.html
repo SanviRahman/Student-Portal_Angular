@@ -1,0 +1,49 @@
+<div class="form-wrapper">
+  <div class="form-container">
+    <h2>Add Student</h2>
+
+    <form #f="ngForm" (ngSubmit)="onSubmit(f)" novalidate>
+
+      <!-- Name -->
+      <div class="form-group">
+        <input type="text" name="name" [(ngModel)]="student.name" placeholder="Full Name" required #nameRef="ngModel">
+        <label>Name</label>
+        <span class="error" *ngIf="nameRef.invalid && nameRef.touched">
+          Name is required.
+        </span>
+      </div>
+
+      <!-- Email -->
+      <div class="form-group">
+        <input type="email" name="email" [(ngModel)]="student.email" placeholder="Email Address" required email #emailRef="ngModel">
+        <label>Email</label>
+        <span class="error" *ngIf="emailRef.invalid && emailRef.touched">
+          <span *ngIf="emailRef.errors?.['required']">Email is required.</span>
+          <span *ngIf="emailRef.errors?.['email']">Enter a valid email.</span>
+        </span>
+      </div>
+
+      <!-- Course -->
+      <div class="form-group">
+        <input type="text" name="course" [(ngModel)]="student.course" placeholder="Course" required #courseRef="ngModel">
+        <label>Course</label>
+        <span class="error" *ngIf="courseRef.invalid && courseRef.touched">
+          Course is required.
+        </span>
+      </div>
+
+      <!-- Submit Button -->
+      <button type="submit" [disabled]="f.invalid">Add Student</button>
+
+    </form>
+  </div>
+</div>
+
+<!-- Popup Modal -->
+<div class="modal" *ngIf="showPopup">
+  <div class="modal-content">
+    <span class="close" (click)="closePopup()">&times;</span>
+    <h2>🎉 Student Added Successfully!</h2>
+    <p>{{student.name || 'Student'}} has been added to the list.</p>
+  </div>
+</div>

@@ -1,0 +1,13 @@
+.team-card {
+  background: #FFF3E0; /* Soft Amber */
+  border-left: 5px solid #FFC107; /* Highlight */
+  padding: 16px;
+  border-radius: 8px;
+  color: #333;
+  box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+}
+
+.team-card h3 {
+  margin-top: 0;
+  color: #0D47A1; /* Primary */
+}

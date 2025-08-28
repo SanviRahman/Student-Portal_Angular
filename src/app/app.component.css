@@ -1,0 +1,67 @@
+/* Page background */
+:host {
+  display: block;
+  min-height: 100vh;
+  background: #F4F6F9; /* Light neutral */
+  padding: 20px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #333; /* Dark text */
+}
+
+/* Main content area */
+.content {
+  margin: 30px auto;
+  padding: 24px;
+  max-width: 960px;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.1);
+  animation: fadeIn 0.4s ease-in-out;
+}
+
+/* Heading style */
+h2 {
+  color: #0D47A1; /* Primary */
+  border-left: 5px solid #42A5F5; /* Accent */
+  padding-left: 10px;
+  margin-bottom: 20px;
+  font-weight: 600;
+}
+
+/* Buttons */
+button {
+  background: #1565C0; /* Secondary */
+  color: white;
+  border: none;
+  padding: 10px 18px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+button:hover {
+  background: #0D47A1; /* Primary */
+  transform: translateY(-2px);
+}
+
+/* Inputs */
+input {
+  padding: 10px;
+  margin: 8px 0;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  width: 100%;
+  transition: border-color 0.3s ease;
+}
+
+input:focus {
+  border-color: #42A5F5; /* Accent */
+  outline: none;
+}
+
+/* Smooth fade in animation */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}

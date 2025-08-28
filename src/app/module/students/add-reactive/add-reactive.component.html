@@ -1,0 +1,49 @@
+<div class="form-wrapper">
+  <div class="form-container">
+    <h2>Add Student (Reactive)</h2>
+
+    <form [formGroup]="studentForm" (ngSubmit)="onSubmit()">
+
+      <!-- Name -->
+      <div class="form-group">
+        <input type="text" formControlName="name" placeholder="Full Name">
+        <label>Name</label>
+        <span class="error" *ngIf="studentForm.get('name')?.invalid && studentForm.get('name')?.touched">
+          Name is required
+        </span>
+      </div>
+
+      <!-- Email -->
+      <div class="form-group">
+        <input type="email" formControlName="email" placeholder="Email Address">
+        <label>Email</label>
+        <span class="error" *ngIf="studentForm.get('email')?.invalid && studentForm.get('email')?.touched">
+          <span *ngIf="studentForm.get('email')?.errors?.['required']">Email is required.</span>
+          <span *ngIf="studentForm.get('email')?.errors?.['email']">Enter a valid email.</span>
+        </span>
+      </div>
+
+      <!-- Course -->
+      <div class="form-group">
+        <input type="text" formControlName="course" placeholder="Course">
+        <label>Course</label>
+        <span class="error" *ngIf="studentForm.get('course')?.invalid && studentForm.get('course')?.touched">
+          Course is required
+        </span>
+      </div>
+
+      <!-- Submit Button -->
+      <button type="submit" [disabled]="studentForm.invalid">Add Student</button>
+
+    </form>
+  </div>
+</div>
+
+<!-- Popup Modal -->
+<div class="modal" *ngIf="showPopup">
+  <div class="modal-content">
+    <span class="close" (click)="closePopup()">&times;</span>
+    <h2>🎉 Student Added Successfully!</h2>
+    <p>A new student has been added to the list.</p>
+  </div>
+</div>
