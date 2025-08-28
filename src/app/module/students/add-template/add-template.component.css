@@ -85,7 +85,7 @@ button:disabled {
 }
 
 button:hover:not(:disabled) {
-  background: #6a11cb;
+  background:#1565C0;
 }
 
 /* Modal Styling */

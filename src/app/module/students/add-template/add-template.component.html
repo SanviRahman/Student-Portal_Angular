@@ -39,11 +39,22 @@
   </div>
 </div>
 
-<!-- Popup Modal -->
+<!-- Success Popup Modal -->
 <div class="modal" *ngIf="showPopup">
   <div class="modal-content">
-    <span class="close" (click)="closePopup()">&times;</span>
+    <span class="close" (click)="closePopup('success')">&times;</span>
     <h2>🎉 Student Added Successfully!</h2>
     <p>{{student.name || 'Student'}} has been added to the list.</p>
   </div>
 </div>
+
+<!-- Error Popup Modal -->
+<div class="modal" *ngIf="errorPopup">
+  <div class="modal-content">
+    <span class="close" (click)="closePopup('error')">&times;</span>
+    <h2>⚠️ Form Invalid!</h2>
+    <p>Please fill all required fields correctly.</p>
+  </div>
+</div>
+
+

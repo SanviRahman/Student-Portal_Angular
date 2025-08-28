@@ -8,13 +8,14 @@ import { FormBuilder, Validators } from '@angular/forms';
   styleUrls: ['./add-reactive.component.css']
 })
 export class AddReactiveComponent {
-  studentForm = this.fb.group({
+   studentForm = this.fb.group({
     name: ['', Validators.required],
     email: ['', [Validators.required, Validators.email]],
     course: ['', Validators.required]
   });
 
-  showPopup: boolean = false; 
+  showPopup: boolean = false;       // Success modal
+  errorPopup: boolean = false;      // Error modal
 
   constructor(private fb: FormBuilder, private studentService: StudentService) { }
 
@@ -23,10 +24,14 @@ export class AddReactiveComponent {
       this.studentService.addStudent(this.studentForm.value as any);
       this.showPopup = true; 
       this.studentForm.reset();
+    } else {
+      this.errorPopup = true;        // Show error modal
+      this.studentForm.markAllAsTouched(); // Show errors on all invalid fields
     }
   }
 
-  closePopup() {
-    this.showPopup = false;
+  closePopup(type: 'success' | 'error') {
+    if (type === 'success') this.showPopup = false;
+    if (type === 'error') this.errorPopup = false;
   }
 }

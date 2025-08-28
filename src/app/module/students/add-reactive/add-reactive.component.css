@@ -91,7 +91,7 @@ button:disabled {
 }
 
 button:hover:not(:disabled) {
-  background: #6a11cb;
+  background: #094385;
   box-shadow: 0 5px 15px rgba(106,17,203,0.4);
 }
 

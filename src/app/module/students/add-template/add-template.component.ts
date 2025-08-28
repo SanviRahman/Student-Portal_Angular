@@ -10,20 +10,24 @@ import { NgForm } from '@angular/forms';
 })
 export class AddTemplateComponent {
   student: Student = { id: 0, name: '', email: '', course: '' };
-  showPopup: boolean = false; // modal visibility
+  showPopup: boolean = false; // success modal
+  errorPopup: boolean = false; // error modal
 
   constructor(private studentService: StudentService) { }
 
   onSubmit(form: NgForm) {
     if (form.valid) {
       this.studentService.addStudent(this.student);
-      this.showPopup = true; // show modal
+      this.showPopup = true;
       form.reset();
       this.student = { id: 0, name: '', email: '', course: '' };
+    } else {
+      this.errorPopup = true; // show error modal
     }
   }
 
-  closePopup() {
-    this.showPopup = false;
+  closePopup(type: 'success' | 'error') {
+    if (type === 'success') this.showPopup = false;
+    if (type === 'error') this.errorPopup = false;
   }
 }
