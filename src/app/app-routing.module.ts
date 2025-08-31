@@ -7,10 +7,12 @@ const routes: Routes = [
   { path: '', redirectTo: '/students', pathMatch: 'full' },
   { path: 'about', component: AboutComponent },
   {
-    path: 'students', loadChildren: () =>
+    path: 'students',
+    loadChildren: () =>
       import('./module/students/students.module').then(m => m.StudentsModule)
   },
-  { path: 'practice/:id/:name', component: PracticeComponent }
+
+  { path: 'practice/:id/:name', component: PracticeComponent },
 
 ];
 
