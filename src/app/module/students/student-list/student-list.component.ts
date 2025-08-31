@@ -15,4 +15,24 @@ export class StudentListComponent {
   ngOnInit() {
     this.students = this.studentService.getStudents();
   }
+
+  users = [
+    {
+      id: 1,
+      name: "Shanto"
+    },
+    {
+      id: 2,
+      name: "Sanvi"
+    },
+    {
+      id: 3,
+      name: "Shanta"
+    },
+    {
+      id: 4,
+      name: "Oboni"
+    },
+
+  ]
 }

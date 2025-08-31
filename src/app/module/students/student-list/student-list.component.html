@@ -9,3 +9,15 @@
     </li>
   </ul>
 </div>
+
+<div class="student-list-container" style="margin-top: 20px;">
+  <h2>All Users</h2>
+  <ul class="user-list">
+    <li *ngFor="let user of users">
+      <a [routerLink]="['/practice', user.id, user.name]">
+        <span class="student-id">#{{ user.id }}</span>
+        <span class="student-name">{{ user.name }}</span>
+      </a>
+    </li>
+  </ul>
+</div>

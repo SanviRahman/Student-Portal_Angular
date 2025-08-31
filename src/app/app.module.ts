@@ -9,13 +9,15 @@ import { AboutComponent } from './about/about.component';
 import { MissionComponent } from './about/mission/mission.component';
 import { TeamComponent } from './about/team/team.component';
 
+
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
     AboutComponent,
     MissionComponent,
-    TeamComponent
+    TeamComponent,
+    
   ],
   imports: [
     BrowserModule,
