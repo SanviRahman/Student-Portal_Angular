@@ -6,6 +6,7 @@
   min-height: 100vh;
   background: linear-gradient(to right, #47088a, #032663);
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  border-radius: 12px;
 }
 
 /* Form Container */
