@@ -31,9 +31,13 @@
 }
 
 .student-card:hover {
+  background: #BBDEFB; /* Hover এ একটু গাঢ় নীল */
+  color: #0D47A1;
   transform: translateY(-2px);
   box-shadow: 0 4px 12px rgba(0,0,0,0.15);
 }
+
+
 
 /* Individual info style */
 .student-id {
