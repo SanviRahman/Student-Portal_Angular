@@ -1,7 +1,11 @@
 <nav class="navbar">
   <div class="logo"><a routerLink="/students">🎓 Student Portal</a></div>
-  <div class="nav-links">
-    <a routerLink="/students" routerLinkActive="active">Students</a>
+
+  <!-- Hamburger icon -->
+  <div class="menu-toggle" (click)="toggleMenu()">☰</div>
+
+  <div class="nav-links" [ngClass]="{ 'show': menuOpen }">
+    <a routerLink="/students" routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}">Students</a>
     <a routerLink="/students/add-template" routerLinkActive="active">Template Form</a>
     <a routerLink="/students/add-reactive" routerLinkActive="active">Reactive Form</a>
     <a routerLink="/about" routerLinkActive="active">About</a>
