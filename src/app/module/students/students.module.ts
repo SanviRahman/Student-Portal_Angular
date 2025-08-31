@@ -10,9 +10,9 @@ import { PracticeComponent } from './practice/practice.component';
 
 
 const routes: Routes = [
-  {path: '', component: StudentListComponent},          // /students
+  { path: '', component: StudentListComponent },          // /students
   { path: 'add-template', component: AddTemplateComponent }, // /students/add-template
-  { path: 'add-reactive', component: AddReactiveComponent } , // /students/add-reactive
+  { path: 'add-reactive', component: AddReactiveComponent }, // /students/add-reactive
 ];
 
 @NgModule({
